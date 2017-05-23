@@ -87,6 +87,10 @@ public void put(String clave, String valor){
 			actual = actual.siguiente;
 		}
 		
+		if(!encontrado){
+			val = pordefecto;
+		}
+		
 		return val;
 	}
 }
