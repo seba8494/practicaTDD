@@ -111,12 +111,19 @@ public void put(String clave, String valor){
 		Nodo actual = prim;
 		Nodo ant = null;
 		
-		if(actual != null){
-			if (ant == null){
+		while(actual!= null && actual.clave.equals(clave)){
+			ant = actual;
+			actual = actual.siguiente;
+		}
+		if(actual!=null){
+			
+			if(ant == null){
 				prim = prim.siguiente;
+			}else{
+				ant.siguiente = actual.siguiente;
 			}
 		}
-		tam --;
-		return true;
+		tam--;
+		return true;	
 	}
 }
