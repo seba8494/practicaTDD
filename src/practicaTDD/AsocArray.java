@@ -75,8 +75,18 @@ public void put(String clave, String valor){
 		return val;
 	}
 
-	public Object getOrElse(String string, String string2) {
-		// TODO Auto-generated method stub
-		return null;
+	public String getOrElse(String clave, String pordefecto) {
+		Nodo actual = prim;
+		boolean encontrado = false;
+		String val = "";
+		while(actual != null && !encontrado){
+			if(actual!= null && actual.clave.equals(clave)){
+				val = actual.valor;
+				encontrado = true;
+			}
+			actual = actual.siguiente;
+		}
+		
+		return val;
 	}
 }
