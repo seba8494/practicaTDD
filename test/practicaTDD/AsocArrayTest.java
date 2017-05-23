@@ -11,4 +11,11 @@ public class AsocArrayTest {
 		AsocArray array = new AsocArray();
 		assertEquals(0, array.size());
 	}
+	
+	@Test
+	public void creacionDeArrayAsociativoUnDato(){
+		AsocArray array = new AsocArray();
+		array.put("pepe", "31");
+		assertEquals("31", array.get("pepe"));
+	}
 }

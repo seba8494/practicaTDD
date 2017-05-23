@@ -21,4 +21,14 @@ public class AsocArray {
 		return tam;
 	}
 
+	public void put(String string, String string2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public Object get(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
