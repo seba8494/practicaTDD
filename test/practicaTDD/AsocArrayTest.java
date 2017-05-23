@@ -49,5 +49,11 @@ public class AsocArrayTest {
 		array.get("pepe");
 	}
 	
+	@Test
+	public void funcionGetOrElseDevuelveValorSiEncuentraLaClave(){
+		array.put("pepe", "31");
+		array.put("juan", "44");
+		assertEquals("44", array.getOrElse("juan", "0"));
+	}
 	
 }
