@@ -75,4 +75,13 @@ public class AsocArrayTest {
 		assertEquals(true, array.remove("pepe"));
 		assertEquals(0, array.size());
 	}
+	
+	@Test
+	public void borrarNodoDelArrayConVariosElementosDevuelveTrue(){
+		array.put("pepe", "31");
+		array.put("juan", "2");
+		array.put("luis", "56");
+		assertEquals(true, array.remove("pepe"));
+		assertEquals(2, array.size());
+	}
 }
