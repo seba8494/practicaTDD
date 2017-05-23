@@ -69,6 +69,9 @@ public void put(String clave, String valor){
 			actual = actual.siguiente;
 		}
 		
+		if(!encontrado){
+			throw new UndefinedKeyException();
+		}
 		return val;
 	}
 }
