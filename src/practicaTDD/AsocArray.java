@@ -107,8 +107,16 @@ public void put(String clave, String valor){
 		return encontrado;
 	}
 
-	public Object remove(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	public boolean remove(String clave) {
+		Nodo actual = prim;
+		Nodo ant = null;
+		
+		if(actual != null){
+			if (ant == null){
+				prim = prim.siguiente;
+			}
+		}
+		tam --;
+		return true;
 	}
 }
