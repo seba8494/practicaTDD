@@ -21,14 +21,20 @@ public class AsocArray {
 		return tam;
 	}
 
-	public void put(String string, String string2) {
-		// TODO Auto-generated method stub
-		
+	public void put(String clave, String valor){
+		prim = new Nodo();
+		prim.clave = clave;
+		prim.valor = valor;
+		prim.siguiente = null;
+		tam ++;
 	}
-
-	public Object get(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	
+	public String get(String clave){
+		Nodo actual = prim;
+		String val = "";
+		if(actual!= null && actual.clave.equals(clave)){
+			val = actual.valor;
+		}
+		return val;
 	}
-
 }
