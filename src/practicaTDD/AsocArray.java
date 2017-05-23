@@ -21,43 +21,50 @@ public class AsocArray {
 		return tam;
 	}
 
-	public void put(String clave, String valor){
-
+public void put(String clave, String valor){
+		
 		if(tam == 0){
 			prim = new Nodo();
 			prim.clave = clave;
 			prim.valor = valor;
 			prim.siguiente = null;
 			tam ++;
-
+			
 		}else{
-
+			
 			Nodo actual = prim;
 			Nodo sig = actual.siguiente;
-
-			while (sig != null) {
+			boolean encontrado = false;
+			
+			while (sig != null && !encontrado) {
 				actual = actual.siguiente;
 				sig = actual.siguiente;
+				if(actual.clave.equals(clave)){
+					actual.valor = valor;
+					encontrado = true;
+				}
 			}
-
-			Nodo n = new Nodo();
-			n.clave = clave;
-			n.valor = valor;
-			n.siguiente = null;
-			tam ++;
-			actual.siguiente = n;
-
-			tam++;
+			
+			if(!encontrado){
+				 Nodo n = new Nodo();
+				 n.clave = clave;
+				 n.valor = valor;
+				 n.siguiente = null;
+				 actual.siguiente = n;
+				 tam ++;
+			}
 		}
 
 	}
-
+	
 	public String get(String clave){
 		Nodo actual = prim;
+		boolean encontrado = false;
 		String val = "";
-		while(actual != null){
+		while(actual != null && !encontrado){
 			if(actual!= null && actual.clave.equals(clave)){
 				val = actual.valor;
+				encontrado = true;
 			}
 			actual = actual.siguiente;
 		}
