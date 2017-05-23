@@ -93,4 +93,9 @@ public void put(String clave, String valor){
 		
 		return val;
 	}
+
+	public Object containsKey(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
