@@ -22,36 +22,36 @@ public class AsocArray {
 	}
 
 	public void put(String clave, String valor){
-		
+
 		if(tam == 0){
 			prim = new Nodo();
 			prim.clave = clave;
 			prim.valor = valor;
 			prim.siguiente = null;
 			tam ++;
-			
+
 		}else{
-			
+
 			Nodo actual = prim;
 			Nodo sig = actual.siguiente;
-			
+
 			while (sig != null) {
 				actual = actual.siguiente;
 				sig = actual.siguiente;
 			}
-			
-			 Nodo n = new Nodo();
-			 n.clave = clave;
-			 n.valor = valor;
-			 n.siguiente = null;
-			 tam ++;
-			 actual.siguiente = n;
-			 
+
+			Nodo n = new Nodo();
+			n.clave = clave;
+			n.valor = valor;
+			n.siguiente = null;
+			tam ++;
+			actual.siguiente = n;
+
 			tam++;
 		}
 
 	}
-	
+
 	public String get(String clave){
 		Nodo actual = prim;
 		String val = "";

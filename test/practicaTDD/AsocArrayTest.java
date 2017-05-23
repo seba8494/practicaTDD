@@ -27,4 +27,16 @@ public class AsocArrayTest {
 		assertEquals("31", array.get("pepe"));
 		assertEquals("44", array.get("juan"));
 	}
+	
+	@Test
+	public void insertarNodoConMismaClaveModificaSuValor(){
+		AsocArray array = new AsocArray();
+		array.put("pepe", "31");
+		array.put("juan", "44");
+		array.put("juan", "12");
+		assertEquals("31", array.get("pepe"));
+		assertEquals("12", array.get("juan"));
+		assertEquals(2, array.size());
+		
+	}
 }
