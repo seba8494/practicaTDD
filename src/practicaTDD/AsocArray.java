@@ -68,6 +68,7 @@ public void put(String clave, String valor){
 			}
 			actual = actual.siguiente;
 		}
+		
 		return val;
 	}
 }

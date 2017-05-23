@@ -39,4 +39,10 @@ public class AsocArrayTest {
 		assertEquals(2, array.size());
 		
 	}
+	
+	@Test(expected = UndefinedKeyException.class)
+	public void noEncontrarLaClaveElevaUnaExcepcion() throws Exception{
+		AsocArray array = new AsocArray();
+		array.get("pepe");
+	}
 }
