@@ -106,4 +106,9 @@ public void put(String clave, String valor){
 		
 		return encontrado;
 	}
+
+	public Object remove(String string) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
